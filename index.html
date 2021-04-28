@@ -5,8 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kbaynes.github.io</title>
+    <script>
+        let n = 2;
+        function calculateConnections() {
+            n = Number(document.getElementById("n").value);
+            if (n===NaN || n<=1) {
+                n = 2;
+                init();
+            }
+            for(let e of document.getElementsByName("nvalue")) {
+                e.innerText = n;
+            }
+            document.getElementById("result").innerText = (n*(n-1)/2);
+        }
+        function init() {
+            document.getElementById("n").value = n;
+            calculateConnections();
+        }
+    </script>
 </head>
-<body>
-    Hello from kbaynes.github.io
+<body onload="init()">
+    <h1>Communications Channel Calculator</h1>
+    <div>Calculates the number of communication channels in a group using n * (n - 1) / 2 </div>
+    <div>Number of persons in group (n): <input type="text" id="n" /> <button onclick="calculateConnections()">calculate</button></div>
+    <div>Result: <span name="nvalue">n</span> * (<span name="nvalue">n</span> - 1) / 2 = <span id="result"></span></div>
 </body>
 </html>

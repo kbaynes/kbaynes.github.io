@@ -1,2 +1,3 @@
 # kbaynes.github.io
-My GitHub Pages Site
+
+Go to [https://kbaynes.github.io.](https://kbaynes.github.io)
