@@ -27,14 +27,22 @@
     <style>
     body {
         font-family: 'Montserrat';font-size: 22px;
+        text-align: center;
+        margin-top: 40px;
     }
     </style>
 </head>
 <body onload="init()">
-    <h1>Communications Channel Calculator</h1>
-    <div>Calculates the number of communication channels in a group using n * (n - 1) / 2 </div>
-    <hr />
-    <div>Number of persons in group (n): <input type="text" id="n" /> <button onclick="calculateConnections()">calculate</button></div>
-    <div>Result: <span name="nvalue">n</span> * (<span name="nvalue">n</span> - 1) / 2 = <span id="result"></span></div>
+    <div>
+        <h1>Communications Channel Calculator</h1>
+        <div>Calculates the number of communication channels in a group using n * (n - 1) / 2 </div>
+    </div>
+
+    <div style="margin-top: 60px;">
+        <div>Number of persons in group (n): <input type="text" id="n" /> <button onclick="calculateConnections()">calculate</button></div>
+        <div style="font-size: 60px; font-weight: bolder; text-align: center; align-content: center; margin-top: 40px; margin-left: auto; margin-right: auto;">
+            <span name="nvalue">n</span> * (<span name="nvalue">n</span> - 1) / 2 = <span id="result"></span>
+        </div>
+    </div>
 </body>
 </html>
